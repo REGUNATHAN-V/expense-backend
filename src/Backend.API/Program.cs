@@ -23,11 +23,11 @@ builder.Services.AddApiServices(builder.Configuration);
 var app = builder.Build();
 
 // Swagger
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+// }
 
 // Request logging
 app.UseSerilogRequestLogging();
